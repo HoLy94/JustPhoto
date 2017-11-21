@@ -1,0 +1,83 @@
+@import "../variables"
+@import "../fonts"
+
+
+.slider
+  position: relative
+  z-index: 1
+  .slide-item
+    display: none
+    height: 100vh
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: $black
+      opacity: 0.6
+  .slide-one
+    background: url(../img/slide3.jpg)
+  .slide-two
+    background: url(../img/slide2.jpg)
+  .slide-three
+    background: url(../img/slide1.jpg)
+  .slide-one, .slide-two, .slide-three
+    background-size: cover
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-position: center center
+  .active
+    display: block
+    animation: slider-animation 1.5s ease-in-out
+  .slide-text
+    position: absolute
+    top: calc(50% - 49px)
+    left: calc(50% - 258px)
+    font-size: 5rem
+    letter-spacing: 5px
+    @media screen and ( max-width: 767px )
+      font-size: 4rem
+      top: calc(50% - 39px)
+      left: calc(50% - 172px)
+    @media screen and ( max-width: 767px )
+      font-size: 3.4rem
+      top: calc(50% - 33px)
+      left: calc(50% - 150px)
+  .slider-controls
+    position: absolute
+    right: 2%
+    top: calc(50% - 81px)
+    display: flex
+    flex-direction: column
+    align-items: center
+    .slide-number
+      display: block
+      border: 2px solid $white
+      border-radius: 50%
+      font-size: 16px
+      font-family: 'Roboto'
+      width: 50px
+      height: 50px
+      line-height: 50px
+      text-align: center
+      span
+        color: $red
+    .slide-prev, .slide-next
+      font-size: 40px
+      cursor: pointer
+      transition: 0.5s
+      &:hover
+        color: $red
+    .slide-prev
+      margin-top: 9px
+    @media screen and ( max-width: 767px )
+      transform: rotate(90deg)
+      top: 80%
+      right: 15%
+      .slide-number
+        transform: rotate(-90deg)
+    @media screen and ( max-width: 767px )
+      right: 25%
