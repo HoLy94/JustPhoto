@@ -1,0 +1,25 @@
+{
+  "name": "justphoto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "webpack-dev-server",
+    "build:prod": "webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoLy94/JustPhoto.git"
+  },
+  "author": "Vasyl Martynyshyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoLy94/JustPhoto/issues"
+  },
+  "homepage": "https://github.com/HoLy94/JustPhoto#readme",
+  "dependencies": {
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  }
+}
