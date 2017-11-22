@@ -19,11 +19,11 @@
       background-color: $black
       opacity: 0.6
   .slide-one
-    background: url(../img/slide3.jpg)
+    background: url(../img/slide-3.jpg)
   .slide-two
-    background: url(../img/slide2.jpg)
+    background: url(../img/slide-2.jpg)
   .slide-three
-    background: url(../img/slide1.jpg)
+    background: url(../img/slide-1.jpg)
   .slide-one, .slide-two, .slide-three
     background-size: cover
     background-attachment: fixed
@@ -34,18 +34,16 @@
     animation: slider-animation 1.5s ease-in-out
   .slide-text
     position: absolute
-    top: calc(50% - 49px)
-    left: calc(50% - 258px)
+    top: calc(50% - 50px)
+    width: 100%
+    line-height: 100px
+    text-align: center
     font-size: 5rem
     letter-spacing: 5px
     @media screen and ( max-width: 767px )
       font-size: 4rem
-      top: calc(50% - 39px)
-      left: calc(50% - 172px)
-    @media screen and ( max-width: 767px )
+    @media screen and ( max-width: 576px )
       font-size: 3.4rem
-      top: calc(50% - 33px)
-      left: calc(50% - 150px)
   .slider-controls
     position: absolute
     right: 2%
@@ -79,5 +77,5 @@
       right: 15%
       .slide-number
         transform: rotate(-90deg)
-    @media screen and ( max-width: 767px )
+    @media screen and ( max-width: 576px )
       right: 25%
