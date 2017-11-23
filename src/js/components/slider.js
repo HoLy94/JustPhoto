@@ -31,7 +31,7 @@ const render = () => {
     slider.appendChild(sliderText);
   const controls = document.createElement('div');
     controls.classList.add('slider-controls');
-    slider.appendChild(controls); //!!!!!
+    slider.appendChild(controls);
   const next = document.createElement('a');
     next.classList.add('slide-next');
     controls.appendChild(next);

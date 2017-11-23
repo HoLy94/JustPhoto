@@ -5,6 +5,7 @@ const render = () => {
   const gallery = document.querySelector('.gallery');
   const title = document.createElement('div')
         title.classList.add('title');
+        title.setAttribute('data-aos', 'fade-right'); //!!!!!!!!!
   const h2 = document.createElement('h2');
     h2.textContent = 'Lorem ipsum.';
     title.appendChild(h2);
@@ -14,10 +15,12 @@ const render = () => {
   const modalImg = document.querySelector('.modal-img');
   const modalImgCaption = document.querySelector('.modal-caption');
   const modalCloseButton = document.querySelector('.modal-close');
-
+  let animDelay = 100; //!!!!!!!!!!!!!!!
   for (let image of images) {
     const galleryItem = document.createElement('div');
           galleryItem.classList.add('gallery-item');
+          galleryItem.setAttribute('data-aos', 'flip-right'); //!!!!!!!!
+          galleryItem.setAttribute('data-aos-delay', `${animDelay += 100}`); //!!!!!!!!
     const figure = document.createElement('figure');
     const img = document.createElement('img');
           img.src = image.src;
