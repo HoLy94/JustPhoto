@@ -1,0 +1,43 @@
+@import "../variables"
+@import "../keyframes"
+
+.modal
+  display: none
+  align-items: center
+  justify-content: center
+  position: fixed
+  z-index: 10
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: darken($blackRgba, 30%)
+  &-content
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 auto
+    animation: gallery-animation 0.6s
+  &-close
+    background-color: transparent
+    float: right
+    font-size: 40px
+    color: $white
+    cursor: pointer
+    transition: 0.5s
+    &:hover
+      color: $red
+  &-header
+    width: 80%
+  &-body
+    text-align: center
+    img
+      border-radius: 10px
+      display: inline
+      width: 80%
+  &-footer
+    align-self: center
+    margin-top: 10px
+    p
+      font-size: 1.5rem

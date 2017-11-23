@@ -4,14 +4,14 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 var extractPlugin = new ExtractTextPlugin({
-  filename: './css/main.min.css'
+  filename: './main.min.css'
 });
 
 module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: './js/bundle.min.js'
+    filename: './bundle.min.js'
   },
   module: {
     rules: [
@@ -44,7 +44,7 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'img/',
-              publicPath: '../'
+              // publicPath: 'dist/'
             }
           }
         ]
